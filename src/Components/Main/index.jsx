@@ -14,11 +14,7 @@ export function Main() {
       <main className={styles.main}>
 
         <Contents />
-
-
-
-        <p>新規作成</p>
-
+        
       </main>
     </>
   )

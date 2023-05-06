@@ -2,7 +2,6 @@ import classes from "src/Components/Header/Header.module.css";
 import Link from "next/link";
 
 export function Header(props) {
-  console.log(props);
   return (
     <>
       <header className={classes.header}>
