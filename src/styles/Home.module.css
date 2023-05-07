@@ -1,0 +1,15 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem;
+  min-height: 100vh;
+}
+
+.listItems {
+  margin-bottom: 50px;
+  background-color: antiquewhite;
+  width: 100%;
+  
+}

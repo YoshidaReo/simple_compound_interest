@@ -19,6 +19,7 @@ const ITEMS = [
 ];
 
 export function Contents() {
+
   return (
     <>
       {ITEMS.map((item) => {
@@ -42,6 +43,8 @@ export function Contents() {
               </>
             )
           })}
+
+
     </>
   )
 }

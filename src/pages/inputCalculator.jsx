@@ -1,10 +1,58 @@
 import Head from 'next/head'
 import {Header} from 'src/Components/Header'
-import {UserSettingMain} from 'src/Components/UserSettingMain'
+import React, { useCallback, useState } from "react";
+import styles from 'src/styles/Home.module.css'
 
 
 
 export default function Home() {
+
+  const contents = [
+    {
+        id: "AAA",
+        // name: "Tanaka",
+        principal: 10000,
+        monthlyMoney: 500,
+        annualInterest: 4,
+        IncreaseDecreaseRate: 3,
+        costAnnualRate: 1,
+        investmentPeriod: 40
+    },
+    {
+        id: "BBB",
+        // name: "Asuka",
+        principal: 10000,
+        monthlyMoney: 500,
+        annualInterest: 4,
+        IncreaseDecreaseRate: 3,
+        costAnnualRate: 1,
+        investmentPeriod: 40
+    },
+    {
+        id: "CCC",
+        // name: "Sakura",
+        principal: 10000,
+        monthlyMoney: 500,
+        annualInterest: 4,
+        IncreaseDecreaseRate: 3,
+        costAnnualRate: 1,
+        investmentPeriod: 40
+    }
+  ];
+
+  const listItems =contents.map((e,index) =>
+    <ul key={e.id} className={styles.listItems}>
+      <li>ID: {e.id}</li>
+      <li>名前: 新規作成{index}</li>
+      <li>元本: {e.principal}</li>
+      <li>毎月積立金額: {e.monthlyMoney}</li>
+      <li>年利: {e.annualInterest}</li>
+      <li>増減配当率: {e.IncreaseDecreaseRate}</li>
+      <li>コスト年率: {e.costAnnualRate}</li>
+      <li>投資期間: {e.investmentPeriod}</li>
+    </ul>
+  );
+
   return (
     <>
       <Head>
@@ -16,7 +64,28 @@ export default function Home() {
 
       <Header title="複利計算"/>
 
-      <h1>計算入力</h1>
+      <main className={styles.main}>
+        {listItems}
+
+        
+          {/* {contents.map((e,index) => (
+            <ul key={e.id} className={styles.content}>
+
+              <li>ID: {e.id}</li>
+              <li>名前: 新規作成{index}</li>
+              <p>元本: {e.principal}</p>
+              <p>毎月積立金額: {e.monthlyMoney}</p>
+              <p>年利: {e.annualInterest}</p>
+              <p>増減配当率: {e.IncreaseDecreaseRate}</p>
+              <p>コスト年率: {e.costAnnualRate}</p>
+              <p>投資期間: {e.investmentPeriod}</p>
+            </ul>
+          ))} */}
+
+        
+
+        
+      </main>
     </>
   )
 }
